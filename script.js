@@ -1,6 +1,6 @@
 function getComputerChoice() {
     let computerChoice = Math.floor(Math.random() * 3);
-    console.log("computer choice was ", computerChoice);
+    // console.log("computer choice was ", computerChoice);
     return computerChoice;
 }
 
@@ -16,17 +16,15 @@ function getHumanChoice() {
     return userChoice;
 }
 
-function playRound(){
+function playRound() {
     let humanchoice = getHumanChoice();
     let computerchoice = getComputerChoice();
-
-    console.log("Huuuuuman chouice is ", humanchoice);
-
+    console.log(`Human choice was ${humanchoice}, computer choice was ${computerchoice}`);
 }
 
 function getResult(computerscore, userscore) {
     if (computerscore < userscore){
-        alert("OMG, you did it Amanda! You won against computer, now try to win against Harry.!")
+        alert("OMG, you did it Amanda! You won against computer, now try to win against Harry!")
     }
 
     else{
