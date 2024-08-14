@@ -6,7 +6,7 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-alert("Welcome Amanda, you will be playing rock paper scissors against a computer, you will play 5 rounds. If it is a draw you will be prompted again to choose. Good luck on your journey!")
+alert("Welcome Amanda, you will be playing rock paper scissors against a computer, the winner will be best out of 5 rounds. If it is a draw you will be prompted again to choose. Good luck on your journey!")
 
 function getHumanChoice() {
     let userChoice;
@@ -93,12 +93,16 @@ function getResult(computerscore, amandascore) {
 
 function main() {
     // playRound();
-
-    for(i = 0; i < 5; i++){
-        playRound();
+    if (computerscore === 3 || userscore === 3)
+    {
+        getResult(computerscore, userscore);
     }
-
-    getResult(computerscore, userscore);
+    else 
+    {
+        for(i = 0; i < 5; i++){
+            playRound();
+        }
+    }
 }
 
 main();
