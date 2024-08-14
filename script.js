@@ -11,7 +11,7 @@ alert("Welcome Amanda, you will be playing rock paper scissors against a compute
 function getHumanChoice() {
     let userChoice;
     do {
-        userChoice = prompt("So then Amanda, pick your poison. Rock, paper, or scissors?");
+        userChoice = prompt(`So then Amanda, pick your poison. Rock, paper, or scissors? The score currently is Amanda: ${userscore}, Computer: ${computerscore}.`);
         
         if (userChoice) {
             userChoice = userChoice.trim().toLowerCase();
