@@ -79,12 +79,14 @@ function playRound() {
 function getResult(computerscore, amandascore) {
     if (computerscore < amandascore){
         alert("OMG, you did it Amanda! You won against computer, now try to win against Harry!")
-        window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        // window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+        window.location.href = "vnd.youtube:dQw4w9WgXcQ";
     }
 
     else{
         alert("Uh-oh Amanda, do better! Computer won!")
-        window.location.href = "https://www.youtube.com/watch?v=Cmcd7XZ6ppk";
+        // window.location.href = "https://www.youtube.com/watch?v=Cmcd7XZ6ppk";
+        window.location.href = "vnd.youtube:Cmcd7XZ6ppk";
     }
 
 }
