@@ -92,15 +92,20 @@ function getResult(computerscore, amandascore) {
 }
 
 function main() {
-    // playRound();
-    if (computerscore === 3 || userscore === 3)
-    {
+    // Check if someone has already won
+    if (computerscore === 3 || userscore === 3) {
         getResult(computerscore, userscore);
+        return; // Exit the function if the game is already over
     }
-    else 
-    {
-        for(i = 0; i < 5; i++){
-            playRound();
+    
+    // Play up to 5 rounds or until someone wins
+    for (let i = 0; i < 5; i++) {
+        playRound();
+        
+        // Check the scores after each round
+        if (computerscore === 3 || userscore === 3) {
+            getResult(computerscore, userscore);
+            break; // Exit the loop if someone wins
         }
     }
 }
