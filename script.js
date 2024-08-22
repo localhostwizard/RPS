@@ -6,12 +6,12 @@ function getComputerChoice() {
     return computerChoice;
 }
 
-alert("Welcome Amanda, you will be playing rock paper scissors against a computer, the winner will be best out of 5 rounds. If it is a draw you will be prompted again to choose. Good luck on your journey!")
+alert("Welcome User, you will be playing rock paper scissors against a computer, the winner will be best out of 5 rounds. If it is a draw you will be prompted again to choose. Good luck on your journey!")
 
 function getHumanChoice() {
     let userChoice;
     do {
-        userChoice = prompt(`So then Amanda, pick your poison. Rock, paper, or scissors? The score currently is Amanda: ${userscore}, Computer: ${computerscore}.`);
+        userChoice = prompt(`So then User, pick your poison. Rock, paper, or scissors? The score currently is User: ${userscore}, Computer: ${computerscore}.`);
         
         if (userChoice) {
             userChoice = userChoice.trim().toLowerCase();
@@ -20,11 +20,11 @@ function getHumanChoice() {
         if (userChoice === null) {
             alert("Oh woah! Why you hit that? Are you trying to quit? Nuh-uh. You gotta finish this, good luck!");
         } else if (userChoice.includes(" ")) {
-            alert("One word only, Amanda! No spaces allowed. Try again.");
+            alert("One word only, User! No spaces allowed. Try again.");
         } else if (userChoice === "scissor") {
             alert("Could you please use plural for scissor? Thanks!")
         } else if (userChoice !== "rock" && userChoice !== "paper" && userChoice !== "scissors") {
-            alert(`Invalid choice Amanda, what even is "${userChoice}"? Just try again.`);
+            alert(`Invalid choice User, what even is "${userChoice}"? Just try again.`);
         }
 
     } while (userChoice === null || userChoice.includes(" ") || (userChoice !== "rock" && userChoice !== "paper" && userChoice !== "scissors"));
@@ -76,15 +76,15 @@ function playRound() {
 
 }
 
-function getResult(computerscore, amandascore) {
-    if (computerscore < amandascore){
-        alert("OMG, you did it Amanda! You won against computer, now try to win against Harry!")
+function getResult(computerscore, Userscore) {
+    if (computerscore < Userscore){
+        alert("OMG, you did it User! You won against computer, now try to win against Harry!")
         // window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
         window.location.href = "vnd.youtube:dQw4w9WgXcQ";
     }
 
     else{
-        alert("Uh-oh Amanda, do better! Computer won!")
+        alert("Uh-oh User, do better! Computer won!")
         // window.location.href = "https://www.youtube.com/watch?v=Cmcd7XZ6ppk";
         window.location.href = "vnd.youtube:Cmcd7XZ6ppk";
     }
